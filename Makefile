@@ -1,4 +1,4 @@
-image_tor := patrickod/tor
+image_tor := mapic/tor
 
 .PHONY: start stop run build tor
 

@@ -1,6 +1,6 @@
 FROM debian:jessie
 
-MAINTAINER "Patrick O'Doherty <p@trickod.com>"
+MAINTAINER https://keybase.io/knutole
 
 EXPOSE 9001
 ENV DEBIAN_FRONTEND noninteractive
@@ -15,10 +15,6 @@ RUN apt-get update && apt-get install -y \
     openssl \
     tor
 
-# tor-arm does not work in Docker container:
-# _curses.error: setupterm: could not find terminal
-# Install outside of the Docker container if required.
-
 WORKDIR /var/lib/tor
 
 ADD ./torrc /etc/torrc
@@ -28,6 +24,8 @@ ADD ./torrc /etc/torrc
 VOLUME /.tor
 
 # Generate a random nickname for the relay
-RUN echo "Nickname docker$(head -c 16 /dev/urandom  | sha1sum | cut -c1-10)" >> /etc/torrc
+RUN echo "Nickname mapic$(head -c 16 /dev/urandom  | sha1sum | cut -c1-10)" >> /etc/torrc
 
-CMD /usr/bin/tor -f /etc/torrc
+ADD ./docker-entrypoint.sh docker-entrypoint.sh
+CMD bash docker-entrypoint.sh
+# CMD /usr/bin/tor -f /etc/torrc

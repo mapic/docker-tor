@@ -1,7 +1,10 @@
+ContactInfo https://keybase.io/knutole
+ExitPolicy reject *:* 
+AccountingMax 100 GBytes
+RelayBandwidthRate 5 MBytes
+RelayBandwidthBurst 5 MBytes
+AccountingStart month 1 00:00
+MaxMemInQueues 2048
 Log notice stdout
-ExitPolicy reject *:*
-# User debian-tor
-# DataDirectory /var/lib/tor
-DataDirectory /root/.tor
+DirPort 9030 
 ORPort 9001
-#
