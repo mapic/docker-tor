@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t mapic/tor .
+docker build -t mapic/tor-relay:latest .

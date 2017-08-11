@@ -4,7 +4,6 @@ AccountingMax 100 GBytes
 RelayBandwidthRate 5 MBytes
 RelayBandwidthBurst 5 MBytes
 AccountingStart month 1 00:00
-MaxMemInQueues 2048
+MaxMemInQueues 256MBytes
 Log notice stdout
-DirPort 9030 
 ORPort 9001

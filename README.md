@@ -11,5 +11,9 @@ You have two options to get the image:
 1. Build it yourself with `make build`.
 2. Download it via `docker pull mapic/tor` ([automated build][Docker Hub])
 
+--- 
+Original fork: [Fork]
+
 [Tor]: https://www.torproject.org/
 [Docker Hub]: https://registry.hub.docker.com/u/mapic/tor/
+[Fork]: https://github.com/patrickod/docker-tor
