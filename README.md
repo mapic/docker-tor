@@ -1,19 +1,25 @@
-# docker-tor
+# Docker Image for Tor Relay.
 
-Docker image for [Tor].
+## Usage
 
-This image is also on [Docker Hub].
+### Build
 
-## Getting the image
+```bash
 
-You have two options to get the image:
+# download
+git clone git@github.com:mapic/docker-tor.git
+cd docker-tor
 
-1. Build it yourself with `make build`.
-2. Download it via `docker pull mapic/tor` ([automated build][Docker Hub])
+# edit relay config (not necessary)
+nano torrc 
 
---- 
-Original fork: [Fork]
+# build iamge
+bash build.sh
+```
 
-[Tor]: https://www.torproject.org/
-[Docker Hub]: https://registry.hub.docker.com/u/mapic/tor/
-[Fork]: https://github.com/patrickod/docker-tor
+### Start
+```bash
+
+# start tor-relay
+bash run-relay.sh
+```
